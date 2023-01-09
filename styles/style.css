@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+SignWriting);
+
+/*General Styles*/
+
+html {
+    font-family: "Noto Sans SignWriting", sans-serif;
+}
+
+/*Layout*/
+
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 50px repeat(4, 100px) 50px 0.5fr;
+    grid-template-rows: 25px 50px 150px 50px repeat(5, 100px) 25px;
+}
+
+/*Text*/
+
+p {
+    font-size: 3em;
+    color: white;
+}
+
+.one {
+    place-self: center;
+    grid-column: 3;
+    grid-row: 8;
+}
+
+/*Graphics*/
+
+html {
+    background-color: #080808;
+}
+
+.back {
+    background-color: #101010;
+    box-shadow: 10px 10px 5px black;
+    border-radius: 10px;
+}
