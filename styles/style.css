@@ -24,7 +24,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-column: 2 / 7;
+    grid-column: 2 / 8;
     grid-row: 10;
 }
 
@@ -193,6 +193,18 @@ html {
     grid-row: 5;
 }
 
+.external-link-1 {
+    display: inline-block;
+    position: absolute;
+    right: 51%;
+}
+
+.external-link-2 {
+    display: inline-block;
+    position: absolute;
+    right: 37.4%;
+}
+ 
 /*Text*/
 
 .container p {
@@ -205,6 +217,14 @@ html {
 .container .footer p{
     font-family: "Rubik", sans-serif;
     font-size: 1.5em;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 /*Graphics*/
@@ -221,4 +241,11 @@ html {
 
 .one {
     background-color: red;
+}
+
+.container .external-link::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: inline-block;
 }
