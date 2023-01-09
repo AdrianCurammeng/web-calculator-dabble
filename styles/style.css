@@ -11,12 +11,24 @@ html {
 .container {
     display: grid;
     grid-template-columns: 0.5fr 50px repeat(4, 100px) 50px 0.5fr;
-    grid-template-rows: 25px 50px 150px 50px repeat(5, 100px) 25px;
+    grid-template-rows: 50px 50px 200px 50px repeat(5, 100px) 50px;
 }
 
 .back {
-    grid-column: 2 / 7;
+    grid-column: 2 / 8;
     grid-row: 2 / 10;
+}
+
+.screen {
+    place-self: center;
+    grid-column: 3 / 6;
+    grid-row: 3 / 3;
+}
+
+.zero {
+    place-self: center;
+    grid-column: 4;
+    grid-row: 9;
 }
 
 .one {
@@ -29,6 +41,108 @@ html {
     place-self: center;
     grid-column: 4;
     grid-row: 8;
+}
+
+.three {
+    place-self: center;
+    grid-column: 5;
+    grid-row: 8;
+}
+
+.four {
+    place-self: center;
+    grid-column: 3;
+    grid-row: 7;
+}
+
+.five {
+    place-self: center;
+    grid-column: 4;
+    grid-row: 7;
+}
+
+.six {
+    place-self: center;
+    grid-column: 5;
+    grid-row: 7;
+}
+
+.seven {
+    place-self: center;
+    grid-column: 3;
+    grid-row: 6;
+}
+
+.eight {
+    place-self: center;
+    grid-column: 4;
+    grid-row: 6;
+}
+
+.nine {
+    place-self: center;
+    grid-column: 5;
+    grid-row: 6;
+}
+
+.decimal {
+    place-self: center;
+    grid-column: 3;
+    grid-row: 9;
+}
+
+.equals {
+    place-self: center;
+    grid-column: 5;
+    grid-row: 9;
+}
+
+.add {
+    place-self: center;
+    grid-column: 6;
+    grid-row: 9;
+}
+
+.subtract {
+    place-self: center;
+    grid-column: 6;
+    grid-row: 8;
+}
+
+.multiply {
+    place-self: center;
+    grid-column: 6;
+    grid-row: 7;
+}
+
+.divide {
+    place-self: center;
+    grid-column: 6;
+    grid-row: 6;
+}
+
+.percent {
+    place-self: center;
+    grid-column: 3;
+    grid-row: 5;
+}
+
+.squared {
+    place-self: center;
+    grid-column: 4;
+    grid-row: 5;
+}
+
+.clear {
+    place-self: center;
+    grid-column: 5;
+    grid-row: 5;
+}
+
+.backspace {
+    place-self: center;
+    grid-column: 5;
+    grid-row: 5;
 }
 
 /*Text*/
