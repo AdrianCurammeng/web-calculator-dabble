@@ -11,19 +11,24 @@ html {
 
 .container {
     display: grid;
-    grid-template-columns: 0.5fr 50px repeat(4, 100px) 50px 0.5fr;
+    grid-template-columns: 0.5fr 50px repeat(4, 100px) 50px 50px 0.5fr;
     grid-template-rows: 50px 50px 200px 50px repeat(5, 100px) 50px;
 }
 
 .back {
     grid-column: 2 / 8;
-    grid-row: 2 / 10;
+    grid-row: 2 / 11;
 }
 
-.footer {
+.footer, .zero, .one, .two, .three, .four, .five, 
+.six, .seven, .eight, .nine, .decimal, .equals, 
+.add, .subtract, .multiply, .divide, .percent, .squared, .clear, .backspace {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.footer {
     grid-column: 2 / 8;
     grid-row: 10;
 }
@@ -34,161 +39,101 @@ html {
 }
 
 .zero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 4;
     grid-row: 9;
 }
 
 .one {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 3;
     grid-row: 8;
 }
 
 .two {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 4;
     grid-row: 8;
 }
 
 .three {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 5;
     grid-row: 8;
 }
 
 .four {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 3;
     grid-row: 7;
 }
 
 .five {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 4;
     grid-row: 7;
 }
 
 .six {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 5;
     grid-row: 7;
 }
 
 .seven {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 3;
     grid-row: 6;
 }
 
 .eight {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 4;
     grid-row: 6;
 }
 
 .nine {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 5;
     grid-row: 6;
 }
 
 .decimal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 3;
     grid-row: 9;
 }
 
 .equals {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 5;
     grid-row: 9;
 }
 
 .add {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 6;
     grid-row: 9;
 }
 
 .subtract {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 6;
     grid-row: 8;
 }
 
 .multiply {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 6;
     grid-row: 7;
 }
 
 .divide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 6;
     grid-row: 6;
 }
 
 .percent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 3;
     grid-row: 5;
 }
 
 .squared {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 4;
     grid-row: 5;
 }
 
 .clear {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 5;
     grid-row: 5;
 }
 
 .backspace {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     grid-column: 6;
     grid-row: 5;
 }
@@ -196,7 +141,7 @@ html {
 /*Text*/
 
 .container p {
-    font-size: 3em;
+    font-size: 2.4em;
     text-align: center;
     line-height: 100px;
     color: white;
@@ -223,20 +168,30 @@ html {
 
 .container div {
     background-color: red;
+    border-radius: 50%;
+    margin: 12px;
 }
 
 .container div:hover:not(.back):not(.screen):not(.footer) {
     background-color: blue;
 }
 
+.container .backspace {
+    background-image: url("../images/backspace-icon90.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: 32% 50%;
+}
+
 .container .back {
     background-color: #101010;
-    box-shadow: 10px 10px 5px black;
+    box-shadow: 20px 20px 5px black;
     border-radius: 10px;
 }
 
 .container .screen {
     background-color: rgb(20, 20, 20);
+    border-radius: 10px;
 }
 
 .container .footer {
