@@ -221,14 +221,26 @@ html {
     background-color: #080808;
 }
 
-.back {
+.container div {
+    background-color: red;
+}
+
+.container div:hover:not(.back):not(.screen):not(.footer) {
+    background-color: blue;
+}
+
+.container .back {
     background-color: #101010;
     box-shadow: 10px 10px 5px black;
     border-radius: 10px;
 }
 
-.one {
-    background-color: red;
+.container .screen {
+    background-color: rgb(20, 20, 20);
+}
+
+.container .footer {
+    background-color: inherit;
 }
 
 .external-link::after {
