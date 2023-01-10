@@ -192,18 +192,6 @@ html {
     grid-column: 6;
     grid-row: 5;
 }
-
-.external-link-1 {
-    display: inline-block;
-    position: absolute;
-    right: 51%;
-}
-
-.external-link-2 {
-    display: inline-block;
-    position: absolute;
-    right: 37.4%;
-}
  
 /*Text*/
 
@@ -243,9 +231,11 @@ html {
     background-color: red;
 }
 
-.container .external-link::after {
+.external-link::after {
     content: "";
-    width: 30px;
-    height: 30px;
+    background-image: url(../images/external-link24.png);
+    background-repeat: no-repeat;
     display: inline-block;
+    width: 24px;
+    height: 24px;
 }
