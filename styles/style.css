@@ -158,9 +158,19 @@ html {
 }
 
 .container div {
-    background-color: red;
+    background-color: rgb(85, 82, 82);
+    box-shadow: 5px 5px 4px black;
     border-radius: 50%;
     margin: 12px;
+}
+
+.container .add,
+.container .subtract,
+.container .multiply,
+.container .divide,
+.container .squared,
+.container .percent {
+    background-color: rgb(59, 57, 57);
 }
 
 .container div:hover:not(.back):not(.screen):not(.footer) {
@@ -177,16 +187,17 @@ html {
 .container .back {
     background-color: #101010;
     box-shadow: 20px 20px 5px black;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .container .screen {
     background-color: rgb(20, 20, 20);
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .container .footer {
     background-color: inherit;
+    box-shadow: none;
 }
 
 .external-link::after {
