@@ -1,110 +1,45 @@
-//Variables for Numbers
-// const zero = document.querySelector(".zero");
-// const one = document.querySelector(".one");
-// const two = document.querySelector(".two");
-// const three = document.querySelector(".three");
-// const four = document.querySelector(".four");
-// const five = document.querySelector(".five");
-// const six = document.querySelector(".six");
-// const seven = document.querySelector(".seven");
-// const eight = document.querySelector(".eight");
-// const nine = document.querySelector(".nine");
+//Variables for Buttons
+const zero = document.querySelector(".zero-pad");
+const one = document.querySelector(".one-pad");
+const two = document.querySelector(".two-pad");
+const three = document.querySelector(".three-pad");
+const four = document.querySelector(".four-pad");
+const five = document.querySelector(".five-pad");
+const six = document.querySelector(".six-pad");
+const seven = document.querySelector(".seven-pad");
+const eight = document.querySelector(".eight-pad");
+const nine = document.querySelector(".nine-pad");
 
-// const decimal = document.querySelector(".decimal");
-// const equals = document.querySelector(".equals");
+const decimal = document.querySelector(".decimal-pad");
+const equals = document.querySelector(".equals-pad");
 
-// const add = document.querySelector(".add");
-// const subtract = document.querySelector(".subtract");
-// const multiply = document.querySelector(".multiply");
-// const divide = document.querySelector(".divide");
-// const percent = document.querySelector(".percent");
-// const squared = document.querySelector(".squared");
-// const clear = document.querySelector(".clear");
-// const backspace = document.querySelector(".backspace");
+const add = document.querySelector(".add-pad");
+const subtract = document.querySelector(".subtract-pad");
+const multiply = document.querySelector(".multiply-pad");
+const divide = document.querySelector(".divide-pad");
+const percent = document.querySelector(".percent-pad");
+const squared = document.querySelector(".squared-pad");
 
-// const screen = document.querySelector(".screen");
+const backspace = document.querySelector(".backspace-pad");
+const clear = document.querySelector(".clear-pad");
 
-// //Button Functions
-// zero.addEventListener("click", function() {
-//     printNum(0);
-// })
+//Button Functionality
+zero.addEventListener("click", () => {
+    console.log(zero.textContent);
+})
 
-// one.addEventListener("click", function() {
-//     printNum(1);
-// })
+one.addEventListener("click", () => {
+    console.log(one.textContent);
+})
 
-// two.addEventListener("click", function() {
-//     printNum(2);
-// })
+two.addEventListener("click", () => {
+    console.log(two.textContent);
+})
 
-// three.addEventListener("click", function() {
-//     printNum(3);
-// })
+three.addEventListener("click", () => {
+    console.log(three.textContent);
+})
 
-// four.addEventListener("click", function() {
-//     printNum(4);
-// })
-
-// five.addEventListener("click", function() {
-//     printNum(5);
-// })
-
-// six.addEventListener("click", function() {
-//     printNum(6);
-// })
-
-// seven.addEventListener("click", function() {
-//     printNum(7);
-// })
-
-// eight.addEventListener("click", function() {
-//     printNum(8);
-// })
-
-// nine.addEventListener("click", function() {
-//     printNum(9);
-// })
-
-// decimal.addEventListener("click", () => {
-//     console.log("decimal");
-// })
-
-// equals.addEventListener("click", () => {
-//     console.log("equals");
-// })
-
-// add.addEventListener("click", () => {
-//     console.log("add");
-// })
-
-// subtract.addEventListener("click", () => {
-//     console.log("subtract");
-// })
-
-// multiply.addEventListener("click", () => {
-//     console.log("multiply");
-// })
-
-// divide.addEventListener("click", () => {
-//     console.log("divide");
-// })
-
-// percent.addEventListener("click", () => {
-//     console.log("percent");
-// })
-
-// squared.addEventListener("click", () => {
-//     console.log("squared");
-// })
-
-// clear.addEventListener("click", () => {
-//     console.log("clear");
-// })
-
-// backspace.addEventListener("click", () => {
-//     console.log("backspace");
-// })
-
-// function printNum(x) {
-//     console.log(x);
-// }
+four.addEventListener("click", () => {
+    console.log(four.textContent);
+})

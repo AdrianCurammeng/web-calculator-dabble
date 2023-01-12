@@ -35,7 +35,7 @@ html {
 
 .footer, .zero, .one, .two, .three, .four, .five, 
 .six, .seven, .eight, .nine, .decimal, .equals, 
-.add, .subtract, .multiply, .divide, .percent, .squared, .clear, .backspace {
+.add, .subtract, .multiply, .divide, .percent, .squared, .clear, .backspace, .backspace-pad, .footer{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,29 +130,25 @@ html {
 }
 
 button {
-    padding: 40px;
+    height: 80px;
+    width: 80px;
 }
  
 /*Text*/
 
-.container p {
+button {
     font-size: 2.4em;
-    text-align: center;
+    color: white;
+}
+
+.footer p{
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5em;
     line-height: 100px;
     color: white;
 }
 
-.container .footer p{
-    font-family: "Rubik", sans-serif;
-    font-size: 1.5em;
-}
-
 a {
-    color: white;
-}
-
-button {
-    font-size: 2.4em;
     color: white;
 }
 
@@ -168,20 +164,38 @@ html {
 
 button {
     background-color: rgb(85, 82, 82);
-    box-shadow: 5px 5px 4px black;
+    box-shadow: 0 5px rgb(22, 22, 22);
     border: none;
     border-radius: 50%;
 }
 
-button:hover {
-    background-color: blue;
+.clear-pad, .backspace-pad {
+    background-color: rgb(207, 10, 10);
 }
 
-.backspace {
-    background-image: url("../images/backspace-icon90.png");
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: 32% 50%;
+.add-pad, .subtract-pad, .multiply-pad, 
+.divide-pad, .percent-pad, .squared-pad {
+    background-color: rgb(68, 64, 64);
+}
+
+button:hover {
+    background-color: rgb(73, 70, 70);
+    cursor: pointer;
+}
+
+:where(.add-pad, .subtract-pad, .multiply-pad, 
+.divide-pad, .percent-pad, .squared-pad):hover {
+    background-color: rgb(78, 75, 75);
+}
+
+.clear-pad:hover, .backspace-pad:hover {
+    background-color: rgb(177, 6, 6);
+}
+
+button:active {
+    background-color: rgb(73, 70, 70);
+    transform: translateY(3px);
+    box-shadow: 0 2px rgb(18, 18, 18);
 }
 
 .back {
