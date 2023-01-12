@@ -128,6 +128,10 @@ html {
 .backspace {
     grid-area: back;
 }
+
+button {
+    padding: 40px;
+}
  
 /*Text*/
 
@@ -147,6 +151,11 @@ a {
     color: white;
 }
 
+button {
+    font-size: 2.4em;
+    color: white;
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -157,45 +166,36 @@ html {
     background-color: #080808;
 }
 
-.container div {
+button {
     background-color: rgb(85, 82, 82);
     box-shadow: 5px 5px 4px black;
+    border: none;
     border-radius: 50%;
-    margin: 12px;
 }
 
-.container .add,
-.container .subtract,
-.container .multiply,
-.container .divide,
-.container .squared,
-.container .percent {
-    background-color: rgb(59, 57, 57);
-}
-
-.container div:hover:not(.back):not(.screen):not(.footer) {
+button:hover {
     background-color: blue;
 }
 
-.container .backspace {
+.backspace {
     background-image: url("../images/backspace-icon90.png");
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: 32% 50%;
 }
 
-.container .back {
+.back {
     background-color: #101010;
     box-shadow: 20px 20px 5px black;
     border-radius: 15px;
 }
 
-.container .screen {
+.screen {
     background-color: rgb(20, 20, 20);
     border-radius: 15px;
 }
 
-.container .footer {
+.footer {
     background-color: inherit;
     box-shadow: none;
 }
