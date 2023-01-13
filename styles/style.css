@@ -41,6 +41,12 @@ html {
     justify-content: center;
 }
 
+.screen {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
 .footer {
     grid-area: f;
 }
@@ -139,6 +145,12 @@ button {
 button {
     font-size: 2.4em;
     color: white;
+}
+
+.screenNums {
+    font-size: 5em;
+    color: white;
+    padding-right: 20px;
 }
 
 .footer p{

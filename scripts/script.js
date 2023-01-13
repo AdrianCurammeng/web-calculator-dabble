@@ -23,23 +23,113 @@ const squared = document.querySelector(".squared-pad");
 const backspace = document.querySelector(".backspace-pad");
 const clear = document.querySelector(".clear-pad");
 
+const screen = document.querySelector(".screenNums");
+
+//Length of Calculation
+let calcLength = 0;
+let calc = "";
+
 //Button Functionality
 zero.addEventListener("click", () => {
-    console.log(zero.textContent);
+    printNums(zero.textContent);
 })
 
 one.addEventListener("click", () => {
-    console.log(one.textContent);
+    printNums(one.textContent);
 })
 
 two.addEventListener("click", () => {
-    console.log(two.textContent);
+    printNums(two.textContent);
 })
 
 three.addEventListener("click", () => {
-    console.log(three.textContent);
+    printNums(three.textContent);
 })
 
 four.addEventListener("click", () => {
-    console.log(four.textContent);
+    printNums(four.textContent);
 })
+
+five.addEventListener("click", () => {
+    printNums(five.textContent);
+})
+
+six.addEventListener("click", () => {
+    printNums(six.textContent);
+})
+
+seven.addEventListener("click", () => {
+    printNums(seven.textContent);
+})
+
+eight.addEventListener("click", () => {
+    printNums(eight.textContent);
+})
+
+nine.addEventListener("click", () => {
+    printNums(nine.textContent);
+})
+
+decimal.addEventListener("click", () => {
+    printNums(decimal.textContent);
+})
+
+equals.addEventListener("click", () => {
+    printNums(equals.textContent);
+})
+
+add.addEventListener("click", () => {
+    printNums(add.textContent);
+})
+
+subtract.addEventListener("click", () => {
+    printNums(subtract.textContent);
+})
+
+multiply.addEventListener("click", () => {
+    printNums(multiply.textContent);
+})
+
+divide.addEventListener("click", () => {
+    printNums(divide.textContent);
+})
+
+percent.addEventListener("click", () => {
+    printNums(percent.textContent);
+})
+
+squared.addEventListener("click", () => {
+    calc += "^2";
+    screen.textContent += "^2";
+    console.log(calc);
+})
+
+backspace.addEventListener("click", () => {
+    printNums("B");
+})
+
+clear.addEventListener("click", () => {
+    calc = "";
+    screen.textContent = "";
+    calcLength = 0;
+})
+
+//Putting Numbers on the screen
+function printNums(x) {
+    if(calcLength > 8) {
+        screen.style.fontSize = "3em";
+        if(calcLength > 15) {
+            screen.style.fontSize = "2em";
+            if(calcLength > 20) {
+                console.log("Too Long!");
+                return;
+            }
+        }
+    } else {
+        screen.style.fontSize = "5em";
+    }
+    calc += x;
+    screen.textContent += x;
+    console.log(calc);
+    calcLength++;
+}
