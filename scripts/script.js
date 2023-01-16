@@ -28,74 +28,76 @@ const screen = document.querySelector(".screenNums");
 //Length of Calculation
 let calcLength = 0;
 let calc = "";
+let ans;
 
 //Button Functionality
 zero.addEventListener("click", () => {
-    printNums(zero.textContent);
+    doBoth(0, 0);
 })
 
 one.addEventListener("click", () => {
-    printNums(one.textContent);
+    doBoth(1, 1);
 })
 
 two.addEventListener("click", () => {
-    printNums(two.textContent);
+    doBoth(2, 2);
 })
 
 three.addEventListener("click", () => {
-    printNums(three.textContent);
+    doBoth(3, 3);
 })
 
 four.addEventListener("click", () => {
-    printNums(four.textContent);
+    doBoth(4, 4);
 })
 
 five.addEventListener("click", () => {
-    printNums(five.textContent);
+    doBoth(5, 5);
 })
 
 six.addEventListener("click", () => {
-    printNums(six.textContent);
+    doBoth(6, 6);
 })
 
 seven.addEventListener("click", () => {
-    printNums(seven.textContent);
+    doBoth(7, 7);
 })
 
 eight.addEventListener("click", () => {
-    printNums(eight.textContent);
+    doBoth(8, 8);
 })
 
 nine.addEventListener("click", () => {
-    printNums(nine.textContent);
+    doBoth(9, 9);
 })
 
 decimal.addEventListener("click", () => {
-    printNums(decimal.textContent);
+    doBoth(".", ".");
 })
 
 equals.addEventListener("click", () => {
-    printNums(equals.textContent);
+    ans = math.evaluate(calc);
+    console.log(ans);
 })
 
 add.addEventListener("click", () => {
-    printNums(add.textContent);
+    doBoth("+", "+");
 })
 
 subtract.addEventListener("click", () => {
-    printNums(subtract.textContent);
+    doBoth("-", "-");
 })
 
 multiply.addEventListener("click", () => {
-    printNums(multiply.textContent);
+    doBoth("x", "*");
 })
 
 divide.addEventListener("click", () => {
-    printNums(divide.textContent);
+    doBoth("÷", "/");
 })
 
 percent.addEventListener("click", () => {
-    printNums(percent.textContent);
+    doBoth("%", "/100");
 })
 
 squared.addEventListener("click", () => {
@@ -105,20 +107,23 @@ squared.addEventListener("click", () => {
 })
 
 backspace.addEventListener("click", () => {
-    printNums("B");
+    calc = calc.toString().slice(0, calc.length - 1);
+    screen.textContent = calc;
+    console.log(calc);
 })
 
 clear.addEventListener("click", () => {
     calc = "";
     screen.textContent = "";
     calcLength = 0;
+    ans = 0;
 })
 
 //Putting Numbers on the screen
 function printNums(x) {
     if(calcLength > 8) {
         screen.style.fontSize = "3em";
-        if(calcLength > 15) {
+        if(calcLength > 14) {
             screen.style.fontSize = "2em";
             if(calcLength > 20) {
                 console.log("Too Long!");
@@ -128,8 +133,23 @@ function printNums(x) {
     } else {
         screen.style.fontSize = "5em";
     }
-    calc += x;
     screen.textContent += x;
-    console.log(calc);
     calcLength++;
+    console.log(calc);
 }
+
+//Calculates Numbers
+function calculate(x) {
+    if(calcLength > 20) {
+        return;
+    }
+    calc += x;
+    console.log(calc);
+}
+
+function doBoth(x, y) {
+    printNums(x);
+    calculate(y);
+}
+
+//Experiment with JQuery
